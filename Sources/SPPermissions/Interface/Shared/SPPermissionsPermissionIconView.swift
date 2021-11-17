@@ -32,7 +32,7 @@ public class SPPermissionsPermissionIconView: UIView {
     
     // MARK: - Init
     
-    init() {
+    public init() {
         super.init(frame: .zero)
         commonInit()
     }

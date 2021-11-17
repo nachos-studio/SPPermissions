@@ -25,7 +25,7 @@ import UIKit
 @available(iOSApplicationExtension, unavailable)
 public class SPPermissionsActionButton: UIButton {
     
-    var permission: SPPermissions.Permission?
+    public var permission: SPPermissions.Permission?
     
     public var allowTitle: String = Texts.allow_permission_action
     public var allowTitleColor: UIColor = UIColor.tint
@@ -41,19 +41,19 @@ public class SPPermissionsActionButton: UIButton {
     
     // MARK: - Init
     
-    init() {
+    public init() {
         super.init(frame: .zero)
         contentEdgeInsets = UIEdgeInsets.init(top: 5, left: 13, bottom: 5, right: 13)
         titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .bold)
     }
     
-    required init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: - Helpers
     
-    func updateInterface() {
+    public func updateInterface() {
         guard let permission = self.permission else { return }
         switch permission.status {
         case .notDetermined, .notSupported:

@@ -25,7 +25,7 @@ import UIKit
 @available(iOSApplicationExtension, unavailable)
 public class SPPermissionsDrawIconView: UIView {
     
-    var permission: SPPermissions.Permission? {
+    public var permission: SPPermissions.Permission? {
         didSet {
             setNeedsDisplay()
         }
@@ -33,12 +33,12 @@ public class SPPermissionsDrawIconView: UIView {
     
     // MARK: - Init
     
-    init() {
+    public init() {
         super.init(frame: CGRect.zero)
         commonInit()
     }
     
-    required init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
